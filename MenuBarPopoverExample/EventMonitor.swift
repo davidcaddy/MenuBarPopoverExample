@@ -3,7 +3,6 @@
 //  BarConvert
 //
 //  Created by David Caddy on 15/6/20.
-//  Copyright © 2020 David Caddy. All rights reserved.
 //
 
 import Cocoa
@@ -23,13 +22,13 @@ public class EventMonitor {
     }
   
     public func start() {
-        monitor = NSEvent.addGlobalMonitorForEvents(matching: mask, handler: handler)
+        self.monitor = NSEvent.addGlobalMonitorForEvents(matching: self.mask, handler: self.handler)
     }
   
     public func stop() {
-        if monitor != nil {
-            NSEvent.removeMonitor(monitor!)
-            monitor = nil
+        if let eventMonitor = self.monitor {
+            NSEvent.removeMonitor(eventMonitor)
+            self.monitor = nil
         }
     }
 }
