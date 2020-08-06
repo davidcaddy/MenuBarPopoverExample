@@ -21,7 +21,7 @@ class ViewController: NSViewController {
         }
     }
 
-    static func newInsatnce() -> ViewController {
+    static func newInstance() -> ViewController {
         let storyboard = NSStoryboard(name: NSStoryboard.Name("Main"), bundle: nil)
         let identifier = NSStoryboard.SceneIdentifier("ViewController")
       

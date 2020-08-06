@@ -24,7 +24,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             // button.sendAction(on: [.leftMouseUp, .rightMouseUp])
         }
         
-        self.popover.contentViewController = ViewController.newInsatnce()
+        self.popover.contentViewController = ViewController.newInstance()
         self.popover.animates = false
         
         self.eventMonitor = EventMonitor(mask: [.leftMouseDown, .rightMouseDown]) { [weak self] event in
